@@ -84,7 +84,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: ${{ steps.build_skopeo.outputs.ADD_TAG != '' }}
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
